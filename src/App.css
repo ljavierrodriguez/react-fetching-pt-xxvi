@@ -1,4 +1,5 @@
 thead.table-primary th {
     background: blueviolet !important;
+    border: 1px solid blueviolet !important;
     color: white;
 }
