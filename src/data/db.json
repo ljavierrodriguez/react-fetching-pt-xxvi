@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "lastname": "Doe",
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "lastname": "Doe",
+      "gender": "Female"
+    },
+    {
+      "id": 3,
+      "name": "Sarai",
+      "lastname": "Santiago",
+      "gender": "Female"
+    },
+    {
+      "name": "Ana",
+      "lastname": "Alvarez",
+      "gender": "Female",
+      "id": 4
+    }
+  ]
+}
