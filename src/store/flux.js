@@ -35,13 +35,13 @@ const getState = ({ getStore, getActions, setStore }) => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
-        
+
                         if (data.id) {
                             getStudents();
                         } else {
                             throw new Error('Ha ocurrido un error!')
                         }
-        
+
                     })
                     .catch((error) => {
                         console.log(error)
@@ -49,6 +49,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             insertStudentAsync: async (student) => {
                 try {
+                    const { url } = getStore();
+                    const { getStudents } = getActions();
                     const response = await fetch(`${url}/users`, {
                         method: 'POST',
                         body: JSON.stringify(student),
@@ -56,15 +58,15 @@ const getState = ({ getStore, getActions, setStore }) => {
                             'Content-Type': 'application/json'
                         }
                     })
-        
+
                     const data = await response.json();
-        
+
                     if (data.id) {
-                        getUsers();
+                        getStudents();
                     } else {
                         throw Error('Ha ocurrido un error!')
                     }
-        
+
                 } catch (error) {
                     console.log(error)
                 }
@@ -81,9 +83,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                 })
                     .then((response) => response.json())
                     .then(() => {
-        
+
                         getStudents();
-        
+
                     })
                     .catch((error) => {
                         console.log(error)

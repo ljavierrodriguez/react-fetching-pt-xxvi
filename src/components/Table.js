@@ -13,7 +13,7 @@ const Table = ({ students, deleteStudentById }) => {
             </thead>
             <tbody>
                 {
-                    students.length == 0 ? (
+                    students.length === 0 ? (
                         <tr>
                             <th colSpan={5} className="text-center py-5">
                                 <div className="spinner-border text-info" role="status">

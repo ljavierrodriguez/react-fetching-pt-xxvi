@@ -19,7 +19,7 @@ const injectContext = PassedComponent => {
         useEffect(() => {
             state.actions.getStudents();
             
-        }, [])
+        }, [state.actions])
 
         return (
             <Context.Provider value={state}>

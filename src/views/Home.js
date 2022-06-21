@@ -11,7 +11,7 @@ import { Context } from "../store/appContext";
     { id: 3, name: 'Sarai', lastname: 'Santiago', gender: 'Female' },
 ] */
 
-const initialState = [];
+/* const initialState = []; */
 
 const Home = () => {
     // Number, String, Boolean, Undefined,  Object = Array, Null, Literal Object
